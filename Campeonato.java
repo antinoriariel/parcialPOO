@@ -17,10 +17,8 @@ public class Campeonato
     }
     public Campeonato(String p_nombre, Equipo p_equipo){
         this.setNombre(p_nombre);
-        
-        ArrayList<Equipo> p_equipos = new ArrayList<Equipo>();
-        p_equipos.add(p_equipo);
-        this.setEquipos(p_equipos);
+        this.setEquipos(new ArrayList<Equipo>());
+        this.agregar(p_equipo);
     }
 
     private void setNombre(String p_nombre){
