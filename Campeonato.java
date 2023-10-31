@@ -49,6 +49,10 @@ public class Campeonato
         return this.getEquipos().add(p_equipo);
     }
     public boolean quitar(Equipo p_equipo){
-        return this.getEquipos().remove(p_equipo);
+        if(this.getEquipos().size() > 1){
+            return this.getEquipos().remove(p_equipo);
+        }else{
+            return false;
+        }
     }
 }
